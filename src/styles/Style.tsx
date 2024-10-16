@@ -68,7 +68,30 @@ export const style = StyleSheet.create(
             marginVertical:20,
             marginTop:10,
             textAlign:"right"
-        }
+        },
+        signUpHeader:{
+            display:"flex",
+            flexDirection:"row",
+            alignItems:"center",
+            gap:5
+        },
+        signUpPageName:{
+            color:"#ffffff",
+            fontSize:28,
+            fontWeight:"700",
+            marginBottom:20
+        },
+        signUptext:{
+            color:"#ffffff",
+            fontSize:16,
+            fontWeight:"500"
+        },
+        signUpLoginBtn:{
+           color:"#4D81E7",
+           fontSize:16,
+           fontWeight:"500"
+        },
+
     }
 
 )

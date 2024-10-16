@@ -1,12 +1,12 @@
 
-import { Image, Pressable, Text, View } from 'react-native';
+import { Image, Pressable, ScrollView, Text, View } from 'react-native';
 import { style } from '../../styles/Style';
 import InputGroup from '../../components/common/InputGroup';
 import MainBtn from '../../components/common/MainBtn';
 
 const SignIn = () => {
   return (
-    <View>
+    <ScrollView>
      <View style={style.loginHeader}>
     <Image source={require('../../assets/images/blur.png')} style={style.blur}/>
 
@@ -17,7 +17,6 @@ const SignIn = () => {
 
             <Text style={style.regesterPageName}>Sign in to your</Text>
             <Text style={style.regesterPageName}>Account</Text>
-
      </View>
 
     <View style={{padding:44}}>
@@ -28,7 +27,7 @@ const SignIn = () => {
 
     <MainBtn btnText={"Log In"}/>
     </View>
-    </View>
+    </ScrollView>
   );
 };
 
