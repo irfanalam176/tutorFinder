@@ -3,6 +3,8 @@ import React from 'react';
 import {style} from '../../styles/Style';
 import MainBtn from '../../components/common/MainBtn';
 import InputGroup from '../../components/common/InputGroup';
+import MainText from '../../components/common/MainText';
+import BoldText from '../../components/common/BoldText';
 
 const Registration = () => {
   return (
@@ -14,12 +16,12 @@ const Registration = () => {
           source={require('../../assets/images/backArrow.png')}
           style={{width: 26, height: 20, marginBottom: 20}}
         />
-        <Text style={style.signUpPageName}>Register</Text>
+        <BoldText style={style.signUpPageName}>Register</BoldText>
 
         <View style={style.signUpHeader}>
           <Text style={style.signUptext}>Already have an account?</Text>
           <Pressable>
-            <Text style={style.signUpLoginBtn}>Log In</Text>
+            <MainText style={style.signUpLoginBtn}>Log In</MainText>
           </Pressable>
         </View>
       </View>

@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 export type InputProps={
     label:string;
     password:boolean;
@@ -6,4 +8,9 @@ export type InputProps={
 
 export type MainBtnProps={
     btnText:string
+}
+
+export type CarouselProps={
+    qoute:string;
+    author:string
 }

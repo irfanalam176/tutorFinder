@@ -2,6 +2,7 @@ import { StyleSheet } from "react-native";
 
 
 const mainColor="#1D61E7";
+const secondaryColor="#ffffff"
 export const style = StyleSheet.create(
     {
         loginHeader:{
@@ -19,7 +20,7 @@ export const style = StyleSheet.create(
             marginBottom:20
         },
         logoText:{
-            color:"#ffffff",
+            color:secondaryColor,
             fontWeight:"400",
             fontSize:32
         },
@@ -42,7 +43,7 @@ export const style = StyleSheet.create(
             marginBottom:10
         },
         textField:{
-            backgroundColor:"#FFFFFF",
+            backgroundColor:secondaryColor,
             borderWidth:1,
             borderColor:"#EDF1F3",
             borderRadius:10,
@@ -56,7 +57,7 @@ export const style = StyleSheet.create(
             
         },
         mainBtnText:{
-            color:"#ffffff",
+            color:secondaryColor,
             fontWeight:"700",
             fontSize:14,
             textAlign:"center"
@@ -76,13 +77,13 @@ export const style = StyleSheet.create(
             gap:5
         },
         signUpPageName:{
-            color:"#ffffff",
+            color:secondaryColor,
             fontSize:28,
             fontWeight:"700",
             marginBottom:20
         },
         signUptext:{
-            color:"#ffffff",
+            color:secondaryColor,
             fontSize:16,
             fontWeight:"500"
         },
@@ -91,6 +92,101 @@ export const style = StyleSheet.create(
            fontSize:16,
            fontWeight:"500"
         },
+        homeHeader:{
+            display:"flex",
+            alignItems:"center",
+            justifyContent:"space-between",
+            flexDirection:"row"
+        },
+        homeTitle:{
+            display:"flex",
+            flexDirection:"row",
+            gap:7
+        },
+        highlitedText:{
+            color:"#3D8FEF"
+        },
+        notificationBtn:{
+            borderRadius:14,
+            padding:5,
+            width:39,
+            height:39,
+            backgroundColor:secondaryColor,
+            elevation:5,
+            display:"flex",
+            alignItems:"center",
+            justifyContent:"center"
+        },
+        homeSubHeading:{
+            fontSize:16
+        },
+        muteText:{
+            color:"#8C8C8C"
+        },
+        searchBox:{
+            marginTop:20,
+            display:"flex",
+            flexDirection:"row",
+            alignItems:"center",
+            justifyContent:"space-between",
+            borderRadius:32,
+            elevation:5,
+            backgroundColor:secondaryColor,
+            paddingVertical:5,
+            paddingHorizontal:5,
+            paddingLeft:13
+        },
+        carouselDot:{
+            width:13,
+            height:13,
+            borderWidth:2,
+            borderColor:secondaryColor,
+            borderRadius:100,
+            marginHorizontal:5
+        },
+        carouselDotActive:{
+            width:26,
+            height:13,
+            backgroundColor:secondaryColor,
+            borderRadius:100
+        },
+        subHeader:{
+            display:"flex",
+            flexDirection:"row",
+            alignItems:"center",
+            justifyContent:"space-between"
+        },
+        subHeading:{
+            fontSize:15,
+            marginVertical:10
+        },
+        blueText:{
+            color:mainColor
+        },
+        checkBox:{
+            padding:7,
+            borderWidth:2,
+            borderRadius:19,
+            borderColor:mainColor,
+            marginRight:10
+        },
+        checkBoxText:{
+            color:"#8C8C8C",
+            fontSize:12
+        },
+        tutorCard:{
+            width:"48%",
+            backgroundColor:secondaryColor,
+            elevation:5,
+            borderRadius:16,
+            overflow:"hidden",
+            paddingBottom:5,
+        },
+        tutorCardImage:{
+            width:"100%",
+            height:170,
+         
+        }
 
     }
 

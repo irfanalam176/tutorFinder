@@ -3,6 +3,8 @@ import { Image, Pressable, ScrollView, Text, View } from 'react-native';
 import { style } from '../../styles/Style';
 import InputGroup from '../../components/common/InputGroup';
 import MainBtn from '../../components/common/MainBtn';
+import MainText from '../../components/common/MainText';
+import BoldText from '../../components/common/BoldText';
 
 const SignIn = () => {
   return (
@@ -12,18 +14,19 @@ const SignIn = () => {
 
         <View style={style.logoStyle}>
             <Image source={require('../../assets/images/logo.png')} style={{width:70,height:70}}/>
-            <Text style={style.logoText}>Tutor Finder</Text>
+            <BoldText style={style.logoText}>Tutor Finder</BoldText>
         </View>
 
-            <Text style={style.regesterPageName}>Sign in to your</Text>
-            <Text style={style.regesterPageName}>Account</Text>
+            
+            <BoldText style={style.regesterPageName}>Sign in to your</BoldText>
+            <BoldText style={style.regesterPageName}>Account</BoldText>
      </View>
 
     <View style={{padding:44}}>
     <InputGroup label={'Email'} password={false}/>
     <InputGroup label={'Password'} password={true} />
 
-    <Pressable><Text style={style.forgotBtn}>Forgot Password ?</Text></Pressable>
+    <Pressable><MainText style={style.forgotBtn}>Forgot Password ?</MainText></Pressable>
 
     <MainBtn btnText={"Log In"}/>
     </View>
