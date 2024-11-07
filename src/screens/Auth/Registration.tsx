@@ -1,12 +1,15 @@
 import {View, Text, Image, Pressable, ScrollView} from 'react-native';
-import React from 'react';
+import React, {useState} from 'react';
 import {style} from '../../styles/Style';
 import MainBtn from '../../components/common/MainBtn';
 import InputGroup from '../../components/common/InputGroup';
 import MainText from '../../components/common/MainText';
 import BoldText from '../../components/common/BoldText';
+import {Picker} from '@react-native-picker/picker';
 
 const Registration = () => {
+  const [role, setRole] = useState();
+
   return (
     <ScrollView>
       <View style={style.loginHeader}>
@@ -30,7 +33,18 @@ const Registration = () => {
       <View style={{padding: 44}}>
         <InputGroup label={'Name'} password={false} />
         <InputGroup label={'Email'} password={false} />
-        <InputGroup label={'Phone Number'} password={false} isPhone={true}/>
+
+        <MainText style={[style.label,{fontSize:16}]}>Role</MainText>
+        <Picker
+          style={[style.textField,{marginBottom:20}]}
+          selectedValue={role}
+          onValueChange={(itemValue, itemIndex) => setRole(itemValue)}>
+          <Picker.Item label="Student" value="student" />
+          <Picker.Item label="Teacher" value="teacher" />
+          <Picker.Item label="Parent" value="parent" />
+        </Picker>
+
+        <InputGroup label={'Phone Number'} password={false} isPhone={true} />
         <InputGroup label={'Set Password'} password={true} />
         <InputGroup label={'Confirm Password'} password={true} />
 

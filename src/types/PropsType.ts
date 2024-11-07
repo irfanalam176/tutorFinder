@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 
 export type InputProps={
     label:string;
-    password:boolean;
+    password?:boolean;
     isPhone?:boolean;
 }
 

@@ -11,7 +11,7 @@ const InputGroup:React.FC<InputProps> = ({label, password,isPhone}) => {
 
   return (
     <View style={{marginBottom:20}}>
-      <MainText style={style.label}>{label}</MainText>
+      <MainText style={[style.label,{fontSize:16}]}>{label}</MainText>
       <View style={style.textField}>
         <TextInput style={{padding:0}} secureTextEntry={password} keyboardType={isPhone?"phone-pad":"default"}/>
       </View>
