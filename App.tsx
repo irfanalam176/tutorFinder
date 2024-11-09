@@ -5,7 +5,8 @@ import Filter from "./src/screens/Filter/Filter";
 import Home from "./src/screens/Home/Home";
 import VerificationScreen from "./src/screens/TeacherScreens/VerificationScreen/VerificationScreen";
 import { style } from "./src/styles/Style";
-import EditProfile from "./src/screens/TeacherScreens/VerificationScreen/EditProfile";
+import EditProfile from "./src/screens/TeacherScreens/EditProfile/EditProfile";
+import FeedBackScreen from "./src/screens/StudentScreens/FeedbackScreen/FeedBackScreen";
 
 
 
@@ -18,7 +19,8 @@ const App = () => {
   <Filter/>  
 
 <VerificationScreen/> */}
-<EditProfile/>
+{/* <EditProfile/> */}
+<FeedBackScreen/>
 </View>
   )
 };

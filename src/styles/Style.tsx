@@ -4,7 +4,12 @@ const mainColor = '#1D61E7';
 const secondaryColor = '#ffffff';
 export const style = StyleSheet.create({
     mainBg:{
-        backgroundColor:secondaryColor
+        backgroundColor:secondaryColor,
+    },
+    wrapper:{
+      padding:14,
+      paddingBottom:50,
+      minHeight:"100%"
     },
   loginHeader: {
     backgroundColor: '#0000BD',
@@ -251,5 +256,17 @@ export const style = StyleSheet.create({
     position:"absolute",
     bottom:0,
     right:0
+  },
+  feedBackTutorImage:{
+    width:"100%",
+    objectFit:"contain",
+    height:300,
+  },
+  commentCard:{
+    backgroundColor:secondaryColor,
+    borderRadius:10,
+    elevation:5,
+    padding:5,
+    marginTop:10
   }
 });

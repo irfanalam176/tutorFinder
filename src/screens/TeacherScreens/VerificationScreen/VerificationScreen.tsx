@@ -67,7 +67,7 @@ const VerificationScreen: React.FC = () => {
       <View style={style.loginHeader}>
         <BoldText style={style.mainHeading}>Verify Yourself!</BoldText>
       </View>
-      <View style={{padding: 14}}>
+      <View contentContainerStyle={style.wrapper}>
         <MainText style={{fontSize: 16}}>CNIC Photo</MainText>
 
         <TouchableOpacity

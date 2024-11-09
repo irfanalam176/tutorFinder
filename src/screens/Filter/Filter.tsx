@@ -34,7 +34,7 @@ const gender:string[]=[
 const [rating, setRating] = useState(0);
 const [selectedLanguage, setSelectedLanguage] = useState();
   return (
-    <ScrollView style={{padding: 14}}>
+    <ScrollView contentContainerStyle={style.wrapper}>
       <View
         style={{
           display: 'flex',

@@ -34,7 +34,7 @@ const Home = () => {
   }
 
   return (
-    <ScrollView style={{padding: 14}}>
+    <ScrollView contentContainerStyle={style.wrapper}>
       {/* header  */}
       <View style={style.homeHeader}>
         <View style={style.homeTitle}>
