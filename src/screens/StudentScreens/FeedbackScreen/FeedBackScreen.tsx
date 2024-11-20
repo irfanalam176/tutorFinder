@@ -12,7 +12,7 @@ const FeedBackScreen = () => {
     <ScrollView contentContainerStyle={style.wrapper}>
       <Image source={require("../../../assets/images/tutors.png")} style={style.feedBackTutorImage}/>
       <BoldText style={{marginTop:20,marginBottom:10}}>Give Us A Feedback</BoldText>
-      <TextInput style={[style.textField,{marginBottom:10}]} placeholder='Your Feedback' multiline numberOfLines={4} textAlignVertical='top'/>
+     <MainTextInput style={[style.textField,{marginBottom:10}]} placeholder='Your Feedback' multiline numberOfLines={4} textAlignVertical='top'/>
      <MainBtn btnText='Comment'/>
       <BoldText style={{marginTop:10}}>Comments</BoldText>
       <CommentCard/>

@@ -4,14 +4,16 @@ import {
   Image,
   ScrollView,
   Pressable,
+  TextInput,
 } from 'react-native';
 import React, {useState} from 'react';
 import {style} from '../../styles/Style';
 import TitleText from '../../components/common/TitleText';
-import SearchBox from '../../components/common/SearchBox';
 import Carousel from '../../components/common/Carousel';
 import MainText from '../../components/common/MainText';
-const Home = () => {
+import { NavigateProps } from '../../types/NavigationTypes';
+
+const Home:React.FC<NavigateProps> = ({navigation}) => {
   const subject: string[] = [
     'Computer Science',
     'Maths',
@@ -34,7 +36,7 @@ const Home = () => {
   }
 
   return (
-    <ScrollView contentContainerStyle={style.wrapper}>
+    <ScrollView contentContainerStyle={[style.wrapper,{paddingBottom:80}]}>
       {/* header  */}
       <View style={style.homeHeader}>
         <View style={style.homeTitle}>
@@ -48,7 +50,7 @@ const Home = () => {
             gap: 10,
             alignItems: 'center',
           }}>
-          <TouchableOpacity style={style.notificationBtn}>
+          <TouchableOpacity style={style.notificationBtn} onPress={()=>navigation.navigate("notifications")}>
             <Image source={require('../../assets/images/notification.png')} />
           </TouchableOpacity>
           <TouchableOpacity>
@@ -64,7 +66,13 @@ const Home = () => {
       </TitleText>
 
       {/* search box component */}
-      <SearchBox />
+      <View style={style.searchBox}>
+      <Image source={require("../../assets/images/search.png")}/>
+     <TextInput style={{width:"70%",padding:0}} placeholder='Find Tutor '  placeholderTextColor={"#ABB7C2"}/>
+      <TouchableOpacity style={[style.mainBtn,{borderRadius:100,padding:10}]} onPress={()=>navigation.navigate("filter")}>
+        <Image source={require("../../assets/images/filter.png")} style={{width:20,height:20}}/>
+      </TouchableOpacity>
+    </View>
       {/* carousel component */}
       <Carousel />
 

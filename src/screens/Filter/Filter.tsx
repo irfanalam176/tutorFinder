@@ -15,7 +15,9 @@ import InputGroup from '../../components/common/InputGroup';
 import {Picker} from '@react-native-picker/picker';
 import StarRating from 'react-native-star-rating-widget';
 import MainBtn from '../../components/common/MainBtn';
-const Filter = () => {
+import { NavigateProps } from '../../types/NavigationTypes';
+
+const Filter:React.FC<NavigateProps> = ({navigation}) => {
   const subject: string[] = [
     'Computer Science',
     'Maths',
@@ -49,7 +51,7 @@ const [selectedLanguage, setSelectedLanguage] = useState();
             flexDirection: 'row',
             gap: 10,
           }}>
-          <Pressable>
+          <Pressable onPress={()=>navigation.navigate("layout")}>
             <Image source={require('../../assets/images/BlackBackArrow.png')} />
           </Pressable>
           <BoldText style={style.pageTitle}>Filter</BoldText>

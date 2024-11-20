@@ -169,10 +169,14 @@ export const style = StyleSheet.create({
   },
   checkBox: {
     padding: 7,
+    height:40,
     borderWidth: 2,
     borderRadius: 19,
     borderColor: mainColor,
     marginRight: 10,
+    display:"flex",
+    alignItems:"center",
+    justifyContent:"center"
   },
   checkBoxText: {
     color: '#8C8C8C',

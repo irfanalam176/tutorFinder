@@ -5,8 +5,17 @@ import InputGroup from '../../components/common/InputGroup';
 import MainBtn from '../../components/common/MainBtn';
 import MainText from '../../components/common/MainText';
 import BoldText from '../../components/common/BoldText';
+import { AllNavigationProps, NavigateProps } from '../../types/NavigationTypes';
 
-const SignIn = () => {
+const SignIn:React.FC<NavigateProps> = ({navigation}) => {
+
+
+  function navigateTo(path:any){
+    navigation.navigate(path)
+  }
+function login(){
+  navigation.navigate("layout")
+}
   return (
     <ScrollView>
      <View style={style.loginHeader}>
@@ -26,9 +35,13 @@ const SignIn = () => {
     <InputGroup label={'Email'} password={false}/>
     <InputGroup label={'Password'} password={true} />
 
-    <Pressable><MainText style={style.forgotBtn}>Forgot Password ?</MainText></Pressable>
+   <View style={[style.flexRow,{justifyContent:"space-between"}]}>
+   <Pressable onPress={()=>navigateTo("registration")}><MainText style={style.forgotBtn}>Create an Account ?</MainText></Pressable> 
+   <Pressable><MainText style={style.forgotBtn}>Forgot Password ?</MainText></Pressable> 
+   </View>
 
-    <MainBtn btnText={"Log In"}/>
+    <MainBtn btnText={"Log In"} onPress={()=>login()
+    }/>
     </View>
     </ScrollView>
   );

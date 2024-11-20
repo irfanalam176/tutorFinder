@@ -7,7 +7,7 @@ interface TitleTextProps extends TextProps{
 
 const TitleText:React.FC<TitleTextProps> = ({children,style,...props}) => {
   return (
-      <Text {...props} style={[{fontFamily:"Poppins-SemiBold",fontSize:20,color:"#000000"},style]}>{children}</Text>
+     <Text {...props} style={[{fontFamily:"Poppins-SemiBold",fontSize:20,color:"#000000"},style]}>{children}</Text>
   )
 }
 

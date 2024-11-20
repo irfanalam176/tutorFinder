@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-
+import {GestureResponderEvent} from "react-native"
 export type InputProps={
     label:string;
     password?:boolean;
@@ -7,7 +7,8 @@ export type InputProps={
 }
 
 export type MainBtnProps={
-    btnText:string
+    btnText:string,
+    onPress?: (event: GestureResponderEvent) => void;
 }
 
 export type CarouselProps={

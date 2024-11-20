@@ -1,4 +1,4 @@
-import {View, Text, Image, Pressable, ScrollView} from 'react-native';
+import {View, Text, Image, Pressable, ScrollView, TouchableOpacity} from 'react-native';
 import React, {useState} from 'react';
 import {style} from '../../styles/Style';
 import MainBtn from '../../components/common/MainBtn';
@@ -6,24 +6,33 @@ import InputGroup from '../../components/common/InputGroup';
 import MainText from '../../components/common/MainText';
 import BoldText from '../../components/common/BoldText';
 import {Picker} from '@react-native-picker/picker';
+import { NavigateProps } from '../../types/NavigationTypes';
 
-const Registration = () => {
+
+
+const Registration:React.FC<NavigateProps> = ({navigation}) => {
   const [role, setRole] = useState();
 
+  function navigateTo(){
+    navigation.navigate("signIn")
+  }
   return (
     <ScrollView>
       <View style={style.loginHeader}>
-        {/* <Image source={require('../../assets/images/blur.png')} style={style.blur}/> */}
 
-        <Image
+       <View style={[style.flexRow,{gap:15}]}>
+       <TouchableOpacity onPress={navigateTo}>
+       <Image
           source={require('../../assets/images/backArrow.png')}
           style={{width: 26, height: 20, marginBottom: 20}}
         />
+       </TouchableOpacity>
         <BoldText style={style.signUpPageName}>Register</BoldText>
+       </View>
 
         <View style={style.signUpHeader}>
-          <Text style={style.signUptext}>Already have an account?</Text>
-          <Pressable>
+         <MainText style={style.signUptext}>Already have an account?</MainText>
+          <Pressable onPress={navigateTo}>
             <MainText style={style.signUpLoginBtn}>Log In</MainText>
           </Pressable>
         </View>

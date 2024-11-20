@@ -7,7 +7,7 @@ interface MainTextProps extends TextProps{
 
 const MainText:React.FC<MainTextProps> = ({children,style,...props}) => {
   return (
-      <Text {...props} style={[{fontFamily:"Poppins-Regular"},style]}>{children}</Text>
+     <Text {...props} style={[{fontFamily:"Poppins-Regular"},style]}>{children}</Text>
   )
 }
 

@@ -7,7 +7,7 @@ interface BoldTextProps extends TextProps{
 
 const BoldText:React.FC<BoldTextProps> = ({children,style,...props}) => {
   return (
-      <Text {...props} style={[{fontFamily:"adlam"},style]}>{children}</Text>
+     <Text {...props} style={[{fontFamily:"adlam"},style]}>{children}</Text>
   )
 }
 
